@@ -204,12 +204,13 @@ def graficos(v, v_fix, traj, catalogo, config, saida):
     fig, axes = plt.subplots(2, 1, figsize=(8, 6), sharex=True)
     for sku in reps:
         d = traj[traj["sku"] == sku]
-        axes[0].step(d["semana"], d["preco"], where="post", label=sku)
+        nivel = pd.to_numeric(d["nivel"].replace("susp", 0), errors="coerce")
+        axes[0].step(d["semana"], nivel, where="post", marker="o", label=sku)
         axes[1].plot(d["semana"], d["estoque_inicio_semana"], marker="o", label=sku)
     for k in config["dividas"]:
         for ax in axes:
             ax.axvline(int(k.split("_")[1]), color="gray", ls=":", lw=0.8)
-    axes[0].set_ylabel("preço (R$)")
+    axes[0].set_ylabel("nível de preço (× preço atual)")
     axes[1].set_ylabel("estoque esperado")
     axes[1].set_xlabel("semana")
     axes[0].set_title("Q2 — Trajetória de preço e estoque (DP) — produtos representativos")

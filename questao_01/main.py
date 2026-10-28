@@ -125,6 +125,8 @@ def executar(a) -> dict:
     for nome, r in resultados.items():
         ax.plot(r.historico_melhor, label=f"config {nome} — melhor")
         ax.plot(r.historico_media, "--", alpha=0.6, label=f"config {nome} — média viável")
+    piso = min(min(r.historico_melhor) for r in resultados.values())
+    ax.set_ylim(bottom=0.8 * piso)          # médias penalizadas das 1ªs gerações ficam fora da escala
     ax.set_xlabel("geração")
     ax.set_ylabel("fitness (R$)")
     ax.set_title("Q1 — Fitness por geração do GA")
