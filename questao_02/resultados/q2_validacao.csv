@@ -1,0 +1,11 @@
+,plano_MC_DP_Greedy,preco_fixo_1.00
+P_pagar_semana_4,1.0,1.0
+P_pagar_semana_8,1.0,1.0
+P_pagar_semana_12,1.0,1.0
+P_pagar_todas,1.0,1.0
+caixa_final_esperado,305006.99,111666.67
+caixa_final_P5,297659.78,106854.47
+caixa_final_desvio,4075.45,2992.57
+margem_operacional_%,31.73,24.48
+estoque_final_medio_un,647.4,366.2
+cenarios_com_falha,0.0,0.0

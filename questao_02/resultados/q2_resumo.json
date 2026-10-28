@@ -1,0 +1,60 @@
+{
+  "grupo": "G04",
+  "id_instancia": "464a09017fe0",
+  "seed": 4008,
+  "cenario": {
+    "divida_mult": 1.0,
+    "concorrente_mult": 1.0,
+    "custo_log_mult": 1.0,
+    "orcamento_mult": 1.0,
+    "skus_removidos": [],
+    "urgencia": 0.0
+  },
+  "n_skus": 24,
+  "cenarios_construcao": 2000,
+  "cenarios_validacao": 5000,
+  "dividas": {
+    "semana_4": 114905.28,
+    "semana_8": 148419.32,
+    "semana_12": 215447.4
+  },
+  "caixa_inicial": 32478.72,
+  "limite_risco_falha": 0.1,
+  "dentro_do_limite_de_risco": true,
+  "plano": {
+    "P_pagar_semana_4": 1.0,
+    "P_pagar_semana_8": 1.0,
+    "P_pagar_semana_12": 1.0,
+    "P_pagar_todas": 1.0,
+    "caixa_final_esperado": 305006.99,
+    "caixa_final_P5": 297659.78,
+    "caixa_final_desvio": 4075.45,
+    "margem_operacional_%": 31.73,
+    "estoque_final_medio_un": 647.4,
+    "cenarios_com_falha": 0
+  },
+  "preco_fixo": {
+    "P_pagar_semana_4": 1.0,
+    "P_pagar_semana_8": 1.0,
+    "P_pagar_semana_12": 1.0,
+    "P_pagar_todas": 1.0,
+    "caixa_final_esperado": 111666.67,
+    "caixa_final_P5": 106854.47,
+    "caixa_final_desvio": 2992.57,
+    "margem_operacional_%": 24.48,
+    "estoque_final_medio_un": 366.2,
+    "cenarios_com_falha": 0
+  },
+  "dp_estados": 55164,
+  "dp_consultas": 2140992,
+  "tempos_s": {
+    "mc_construcao": 0.3408,
+    "dp_mais_greedy": 0.9796,
+    "mc_validacao": 0.7903
+  },
+  "pico_mem_MB": {
+    "mc_construcao": 1.2,
+    "dp_mais_greedy": 0.57,
+    "mc_validacao": 34.87
+  }
+}
